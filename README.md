@@ -316,3 +316,5 @@ $ python predict.py \
     > https://arxiv.org/pdf/2004.03844.pdf
 6. R-Drop: Regularized Dropout for Neural Networks
     > https://arxiv.org/pdf/2106.14448v2.pdf
+7. TinyBERT: Distilling BERT for Natural Language Understanding
+    > https://arxiv.org/pdf/1909.10351.pdf
