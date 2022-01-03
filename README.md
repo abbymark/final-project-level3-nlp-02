@@ -42,8 +42,7 @@ Final Project in 2nd BoostCamp AI Tech 2기 by **메타몽팀 (2조)**
   - validation_data : 91,741개 (Text, Title, Document Type)
   - test_data : 81,739개 (Text, Title, Document Type)
 
-## How to use (최종 모델 checkpoint로 수정해야함)
-
+## How to use
 ``` python
 import torch
 from transformers import AutoConfig
@@ -71,11 +70,24 @@ tokenizer.decode(summary_ids.squeeze().tolist(), skip_special_tokens=True)
 
 
 
-## Result (결과 뽑고 수정 필요)
+## Result
 
 |            | RougeL |
 |:----------:|:------:|
 |    Test    | 41.687 |
+
+### 경량화
+|            | RougeL |
+|:----------:|:------:|
+|    Student    | 37.889 |
+|    Basic Distillation| 39.51|
+|    Tiny Distillation| 39.672|
+
+|            | Size(MB) | Latency(ms)|
+|:----------:|:------:|:------:|
+|    BART    | 589.40 | 13|
+|    Pruning | 400.07|6.8|
+|Pruning + Quantization| 200.08|6.8|
 
 
 ## Hardware
